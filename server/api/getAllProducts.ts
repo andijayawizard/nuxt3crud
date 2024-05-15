@@ -1,12 +1,9 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const params = '/api/api.php/records/blog?exclude=ktrg&order=id,desc&page=1,10'
-  // const params = 'wp-json/wp/v2/posts?categories=754&_fields[]=id&_fields[]=title&per_page=10&page=1'
+  const params = `/api/api.php/records/products?exclude=ktrg&order=id,desc&page=1,10`
   try {
     const data = await $fetch(`${params}`, {
       baseURL: `${config.public.apiUrlBitu}`,
-      lazy: true,
-      server: false,
       headers: {
         'x-api-key': `${config.public.apiKeyBitu}`
       }

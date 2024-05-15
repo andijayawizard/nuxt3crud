@@ -1,7 +1,18 @@
 declare global {
   interface Blog {
     id: number,
-    title: string,
-    content: string
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean
+  }
+  interface Product {
+    id: number,
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean,
   }
 }

@@ -2,7 +2,7 @@
 
 <template>
   <Header />
-  <Sidebar />
+  <!-- <Sidebar /> -->
   <slot />
   <Footer />
 </template>
