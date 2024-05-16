@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-const links = [{ 'label': 'Home', 'to': '/' },
-{ 'label': 'About Us', 'to': 'about-us' },
-{ 'label': 'Products', 'to': 'products' },
-{ label: 'Blog', to: 'blog' },
-{ 'label': 'Contact Us', 'to': 'contact-us' }
+const links = [
+  { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about-us' },
+  { label: 'Products', to: '/products' },
+  { label: 'Blog', to: '/blog' },
+  { label: 'Contact Us', to: '/contact-us' }
 ]
 </script>
 

@@ -8,7 +8,7 @@ const items = ref(Array(50))
 const columns = [
   { key: 'id', label: 'ID', sortable: true, direction: 'desc' },
   { key: 'nama', label: 'Judul', sortable: true },
-  // { key: 'rgks', label: 'Ringkasan' },
+  { key: 'author', label: 'Author' },
   // { key: 'action', label: 'Action' }
 ]
 const listBlog: Blog = await $fetch(`/api/getAllBlog`)
