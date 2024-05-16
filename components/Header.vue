@@ -2,6 +2,7 @@
 const links = [
   { label: 'Home', to: '/' },
   { label: 'About Us', to: '/about-us' },
+  { label: 'Menu Website', to: '/menuweb' },
   { label: 'Products', to: '/products' },
   { label: 'Blog', to: '/blog' },
   { label: 'Contact Us', to: '/contact-us' }
