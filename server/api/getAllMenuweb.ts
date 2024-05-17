@@ -1,11 +1,11 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const params=`/api/api.php/records/menuweb?include=id,nama,caption,seo`
+  const params = `/api/api.php/records/menuweb?include=id,nama,caption,seo`
   try {
-    const data=await $fetch(`${params}`, {
-      baseURL:`${config.public.apiUrlBitu}`,
+    const data = await $fetch(`${params}`, {
+      baseURL: `${config.public.apiUrlLocal}`,
       headers: {
-        'x-api-key':`${config.public.apiKeyBitu}`
+        'x-api-key': `${config.public.apiKeyLocal}`
       }
     })
     return data
