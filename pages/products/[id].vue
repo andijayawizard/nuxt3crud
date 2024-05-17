@@ -1,13 +1,17 @@
 <script lang="ts" setup>
 const route = useRoute()
 const id = route.params.id
-const { details } = await useFetch(`/api/getDetailsProduct?id=${id}`)
+const { data } = await useFetch(`/api/getDetailsProduct?id=${id}`)
+const details = data.value as Product
 </script>
 
 <template>
-  <div>
-    Product Details
-    {{ details.nama }}
+  <div class="text-sm font-light">
+    <p>Nama: {{ details.nama }}</p>
+    <p>Brand: {{ details.bid.nama }}</p>
+    <p>Keterangan:
+    <div v-html="details.ktrg"></div>
+    </p>
   </div>
 </template>
 

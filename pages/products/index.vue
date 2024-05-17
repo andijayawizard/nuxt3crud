@@ -13,7 +13,8 @@ const listProducts: Product = await $fetch(`/api/getAllProducts`)
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, index) in listProducts.records" :key="index" class="border-b border-neutral-200 dark:border-white/10">
+      <tr v-for="(item, index) in listProducts.records" :key="index"
+        class="border-b border-neutral-200 dark:border-white/10">
         <td v-text="item.id" class="whitespace-nowrap px-4 py-4"></td>
         <td v-text="item.nama"></td>
         <!-- <td v-text="item.bid.nama"></td> -->

@@ -23,9 +23,9 @@ const listMenuweb: Menuweb = await $fetch(`/api/getAllMenuweb`)
         <td v-text="item.caption"></td>
         <td v-text="item.seo"></td>
         <td>
-          <NuxtLink :to="`/menuweb/${item.id}`">Details</NuxtLink>
-          Edit
-          Delete
+          <NuxtLink class="text-info" :to="`/menuweb/${item.id}`">Details</NuxtLink>
+          <NuxtLink class="pl-4 text-success" :to="`/menuweb/edit/${item.id}`">Edit</NuxtLink>
+          <NuxtLink class="pl-4 text-danger">Delete</NuxtLink>
         </td>
       </tr>
     </tbody>

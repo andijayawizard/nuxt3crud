@@ -1,10 +1,9 @@
 <script lang="ts" setup></script>
 
 <template>
-  <Header />
-  <Breadcrumb />
-  <slot />
-  <Footer />
+  <div>
+    Page: menuweb/edit/[id]
+  </div>
 </template>
 
 <style scoped></style>
