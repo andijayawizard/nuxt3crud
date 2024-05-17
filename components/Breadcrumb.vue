@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-const links = [{
-  label: 'Home', icon: 'i-heroicons-home', to: '/'
-
-}, { label: 'Products', to: '/products' }]
+const links = [
+  { label: 'Home', icon: 'i-heroicons-home', to: '/' },
+  { label: 'Products', to: '/products' },
+  { label: 'Add New', to: '/products/create' }
+]
 </script>
 
 <template>
