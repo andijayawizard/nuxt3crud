@@ -1,14 +1,19 @@
 <script lang="ts" setup>
-const data = { 'name': 'andijaya', 'email': 'andijayawizard@gmail.com' }
+const data = { 'name': 'andijaya', 'email': 'andijayawizard@gmail.com', 'year': '2024' }
 </script>
 
 <template>
-  <div class="font-light text-sm text-center px-4 py-4">
-    <p>
-  created and developed by: {{ data.name }}      
-    </p>
-  more info: {{ data.email }}
-  </div>
+  <footer class="main-footer">
+    <strong>Copyright &copy;
+      {{ data.year }}
+      <a href="#">
+        {{ data.name }} </a>.
+    </strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
 </template>
 
 <style scoped></style>

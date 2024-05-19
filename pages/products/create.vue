@@ -1,7 +1,26 @@
 <script lang="ts" setup>
-useHead({ title: 'Add New Product' })</script>
+// import z from 'zod'
+useHead({ title: 'Add New Product' })
+// const schema = z.object({
+//   nama: z.string()
+// })
+// type Schema = z.output<typeof schema>
+const state = reactive({
+  nama: undefined
+})
+// async function onSubmit(event: FormSubmitEvent<Schema>) {
+//   console.log(event.data);
+// }
+</script>
 
 <template>
+  <UForm>
+    <UFormGroup label="Nama" name="nama">
+      <UInput />
+    </UFormGroup>
+    <UButton type="submit">Submit</UButton>
+  </UForm>
+
   <div class="mx-auto block max-w-sm">
     <form>
       <div class="relative mb-12" data-twe-input-wrapper-init>
