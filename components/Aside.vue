@@ -66,19 +66,19 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a id="MainMenu" href="<?= $abs; ?>/backend/pages/index.php?page=main-menu" class="nav-link">
+                <NuxtLink id="MainMenu" to="/menuweb" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Main Menu</p>
-                </a>
+                </NuxtLink>
               </li>
               <li class="nav-item has-treeview">
-                <a href="#" class="nav-link">
+                <NuxtLink to="/blog" class="nav-link">
                   <i class="nav-icon fas fa-circle"></i>
                   <p>
-                    SEO Tools
+                    Blog
                     <i class="right fas fa-angle-left"></i>
                   </p>
-                </a>
+                </NuxtLink>
                 <ul class="nav nav-treeview">
                   <!-- <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
