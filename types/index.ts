@@ -22,4 +22,12 @@ declare global {
     slug: string,
     pub: boolean
   }
+  interface Brand {
+    id: number,
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean
+  }
 }

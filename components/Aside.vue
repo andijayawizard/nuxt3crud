@@ -6,7 +6,7 @@
     <a href="/" class="brand-link" target="_blank">
       <img src="" alt="Morillo Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">
-        Logo
+        nama
       </span>
     </a>
 
@@ -15,12 +15,11 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="" class="img-circle elevation-2" alt="username">
+          logo <img src="" class="img-circle elevation-2" alt="<?= $sesi['username']; ?>">
         </div>
         <div class="info">
           <a href="#" class="d-block">
-            username
-          </a>
+            username </a>
         </div>
       </div>
 
@@ -31,8 +30,7 @@
           <!-- Add icons to the links using the .nav-icon class
                  with font-awesome or any other icon font library -->
           <li class="nav-header">
-            role
-          </li>
+            role </li>
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -52,33 +50,33 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=user-level" class="nav-link">
+                    <NuxtLink to="/user-level" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Level</p>
-                    </a>
+                    </NuxtLink>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=user" class="nav-link">
+                    <NuxtLink to="/user" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Users</p>
-                    </a>
+                    </NuxtLink>
                   </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <NuxtLink id="MainMenu" to="/menuweb" class="nav-link">
+                <a id="MainMenu" href="<?= $abs; ?>/backend/pages/index.php?page=main-menu" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Main Menu</p>
-                </NuxtLink>
+                </a>
               </li>
               <li class="nav-item has-treeview">
-                <NuxtLink to="/blog" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-circle"></i>
                   <p>
-                    Blog
+                    SEO Tools
                     <i class="right fas fa-angle-left"></i>
                   </p>
-                </NuxtLink>
+                </a>
                 <ul class="nav nav-treeview">
                   <!-- <li class="nav-item has-treeview">
                   <a href="#" class="nav-link">
@@ -120,67 +118,96 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=career" class="nav-link">
+                <NuxtLink to="/services" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Career</p>
-                </a>
+                  <p>Services</p>
+                </NuxtLink>
               </li>
-              <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=people" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>People</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=testimonial" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Testimonial</p>
-                </a>
-              </li>
-
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-circle"></i>
                   <p>
-                    Services
+                    Products
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=services-category" class="nav-link">
+                    <NuxtLink to="/brand" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Services Category</p>
+                      <p>Brand</p>
+                    </NuxtLink>
+                  </li>
+                  <li class="nav-item">
+                    <NuxtLink to="/products" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Products</p>
+                    </NuxtLink>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-circle"></i>
+                  <p>
+                    References
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="<?= $abs; ?>/backend/pages/index.php?page=references-category" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>References Category</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=services" class="nav-link">
+                    <a href="<?= $abs; ?>/backend/pages/index.php?page=references" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Services</p>
+                      <p>References</p>
                     </a>
                   </li>
                 </ul>
               </li>
+              <li class="nav-item">
+                <a href="<?= $abs; ?>/backend/pages/index.php?page=cases-studies" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cases Studies</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= $abs; ?>/backend/pages/index.php?page=projects" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Projects</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <NuxtLink to="/blog" class="nav-link">
+                  <!-- <a id="sidebarBlog" href="#blog" class="nav-link"> -->
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog</p>
+                </NuxtLink>
+              </li>
 
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
                   <i class="nav-icon fas fa-circle"></i>
                   <p>
-                    Blog
+                    Content
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=blog-category" class="nav-link">
+                    <a href="<?= $abs; ?>/backend/pages/index.php?page=content-category" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Blog Category</p>
+                      <p>Content Category</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=blog" class="nav-link">
+                    <a href="<?= $abs; ?>/backend/pages/index.php?page=content" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
-                      <p>Blog</p>
+                      <p>Content</p>
                     </a>
                   </li>
                 </ul>
@@ -205,18 +232,6 @@
                     <a href="<?= $abs; ?>/backend/pages/index.php?page=misc&act=edit&id=1" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Miscellaneous</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=branch" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Branch</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=brand" class="nav-link">
-                      <i class="far fa-circle nav-icon"></i>
-                      <p>Brand</p>
                     </a>
                   </li>
                 </ul>

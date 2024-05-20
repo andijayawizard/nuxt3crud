@@ -13,7 +13,7 @@ const data = await $fetch(`${params}`, {
 
 <template>
   <div v-if="pending">loading...</div>
-  <div v-else class="font-light text-sm px-4 py-4">
+  <div class="font-light text-sm px-4 py-4">
     <p>Nama: {{ data.nama }}</p>
     <p>Caption: {{ data.caption }}</p>
     <p>Slug: {{ data.seo }}</p>
