@@ -1,7 +1,9 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig()
 const route = useRoute();
+const router = useRouter();
 const id = route.params.id
+const title = 'Brand'
 const params = `/api/api.php/records/brand/${id}`
 const { data, pending, error, refresh } = await useFetch(`${params}`, {
   baseURL: `${config.public.apiUrlLocal}`,
@@ -12,6 +14,27 @@ const { data, pending, error, refresh } = await useFetch(`${params}`, {
 const nama = ref(data.value.nama)
 const rgks = ref(data.value.rgks)
 const ktrg = ref(data.value.ktrg)
+const errors: any = ref({})
+useHead({ title: `Edit ${title} | ${data.nama}` })
+const update = async () => {
+  let formData = new FormData()
+  formData.append('nama', nama.value)
+  formData.append('rgks', rgks.value)
+  formData.append('ktrg', ktrg.value)
+  // formData.append('_method', 'put')
+  await $fetch(`${params}`, {
+    method: 'put',
+    body: formData,
+    baseURL: `${config.public.apiUrlLocal}`,
+    headers: {
+      'x-api-key': `${config.public.apiKeyLocal}`
+    }
+  }).then(() => {
+    router.push({ path: '/brand' })
+  }).catch((error) => {
+    errors.value = error.data
+  })
+}
 </script>
 
 <template>
@@ -22,18 +45,16 @@ const ktrg = ref(data.value.ktrg)
         <div class="card">
           <div class="card-header">
             <h4 class="card-title">
-              Edit {{ route.name }} / {{ data.nama }}
+              Edit {{ title }} / {{ data.nama }}
             </h4>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <form enctype="multipart/form-data" id="quickForm"
-              action="<?= $abs; ?>/backend/pages/brand/crud.php?act=<?= $_GET['act']; ?>" method="POST">
+            <form id="quickForm" @submit.prevent="update()">
               <div class="row">
                 <div class="form-group col-md-4">
                   <label>Nama </label>
-                  <input v-html="data.value.nama" type="text" class="form-control" name="nama" required />
-                  <input v-html="data.id" type="text" class="form-control" name="id" />
+                  <input v-model="nama" type="text" class="form-control" placeholder="nama" required />
                 </div>
                 <div class="form-group col-lg-2 custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" name="pub" id="pub" value="1" />
@@ -67,7 +88,8 @@ const ktrg = ref(data.value.ktrg)
                   </div>
                 </div>
               </div>
-              <button class="btn btn-primary btn-sm" name="create"><i class="fa fa-edit"> </i> Submit</button>
+              <button class="btn btn-primary btn-sm" name="create" type="submit"><i class="fa fa-edit"> </i>
+                Submit</button>
               <input type="reset" class="btn btn-danger btn-sm">
             </form>
           </div>

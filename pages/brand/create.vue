@@ -50,8 +50,7 @@ const store = async () => {
               <div class="row">
                 <div class="form-group col-md-4">
                   <label>Nama </label>
-                  <input type="text" value="" class="form-control" name="nama" required>
-                  <input type="hidden" value="" class="form-control" name="id">
+                  <input type="text" class="form-control" v-model="nama" placeholder="nama" required />
                 </div>
                 <div class="form-group col-lg-2 custom-control custom-checkbox">
                   <input class="custom-control-input" type="checkbox" name="pub" id="pub" value="1" />

@@ -27,16 +27,6 @@ const filteredRows = computed(() => {
 </script>
 
 <template>
-  <!-- <UCard>
-    <template #header>
-      <Placeholder class="h-8" />
-    </template>
-<Placeholder class="h-32" />
-<template #footer>
-      <Placeholder class="h-8" />
-    </template>
-</UCard> -->
-
   <div class="flex px-3 py-3.5 border-b border-gray-200 dark:border-gray-700">
     <UInput v-model="q" placeholder="filter data..." />
   </div>

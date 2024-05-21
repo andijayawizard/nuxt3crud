@@ -2,7 +2,11 @@
 const config = useRuntimeConfig()
 useHead({ title: 'Brand List' })
 const route = useRoute()
-const data = await $fetch(`/api/getAllBrand`)
+// const data = await $fetch(`/api/getAllBrand`)
+const { data: listBrand, pending, error, refresh } = await useAsyncData(
+  'listBrand',
+  () => $fetch(`/api/getAllBrand`)
+);
 const id = route.params.id
 const deleteRow = async (id: number) => {
   await $fetch(`/api/api.php/records/brand/${id}`, {
@@ -12,7 +16,7 @@ const deleteRow = async (id: number) => {
       'x-api-key': `${config.public.apiKeyLocal}`
     }
   })
-  refreshNuxtData('data')
+  refreshNuxtData('listBrand')
 }
 </script>
 
@@ -26,13 +30,13 @@ const deleteRow = async (id: number) => {
       </tr>
     </thead>
     <tbody>
-      <tr v-for="(item, index) in data.records" :key="index">
+      <tr v-for="(item, index) in listBrand.records" :key="index">
         <td v-text="item.id"></td>
         <td v-text="item.nama"></td>
         <td>
           <NuxtLink :to="`/brand/${item.id}`">Details</NuxtLink>
           <NuxtLink :to="`/brand/edit/${item.id}`">Edit</NuxtLink>
-          <button @click="deleteRow(id)" class="btn btn-danger btn-xs">Delete</button>
+          <button @click="deleteRow(item.id)" class="btn btn-danger btn-xs">Delete</button>
         </td>
       </tr>
     </tbody>
