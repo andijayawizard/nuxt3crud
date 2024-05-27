@@ -23,10 +23,17 @@ export default defineNuxtConfig({
       ], link: [
         { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css' },
         { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" },
+        { rel: "stylesheet", href: "~/admin-lte/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" },
+        { rel: "stylesheet", href: "~/admin-lte/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" },
       ], script: [
         { src: "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js", body: true },
         { src: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js', body: true },
         { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", body: true },
+        { src: "~/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js", body: true },
+        { src: "~/admin-lte/plugins/datatables/jquery.dataTables.min.js", body: true },
+        { src: "~/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js", body: true },
+        { src: "~/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js", body: true },
+        { src: "~/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js", body: true },
       ]
     }
   },

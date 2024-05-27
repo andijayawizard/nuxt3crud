@@ -18,7 +18,7 @@ const filteredRows = computed(() => {
   if (!q.value) {
     return listBlog.records
   }
-  return listBlog.records.filter((data) => {
+  return listBlog.records.filter((data: any) => {
     return Object.values(data).some((value) => {
       return String(value).toLowerCase().includes(q.value.toLowerCase())
     })
