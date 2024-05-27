@@ -5,7 +5,7 @@ const router = useRouter();
 const id = route.params.id
 const title = 'Brand'
 const params = `/api/api.php/records/brand/${id}`
-const { data, pending, error, refresh } = await useFetch(`${params}`, {
+const { data, pending, error, refresh }: any = await useFetch(`${params}`, {
   baseURL: `${config.public.apiUrlLocal}`,
   headers: {
     'x-api-key': `${config.public.apiKeyLocal}`
@@ -63,12 +63,12 @@ const update = async () => {
               </div>
               <div class="form-group">
                 <label>Summary</label>
-                <textarea v-html="data.ktrg" name="rgks" class="" placeholder="Place some text here"
+                <textarea v-model="rgks" class="" placeholder="Place some text here"
                   style="width: 100%; height: 80px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
               <div class="form-group">
                 <label>Description</label>
-                <textarea v-html="data.ktrg" name="ktrg" class="textarea" placeholder="Place some text here"
+                <textarea v-model="ktrg" class="textarea" placeholder="Place some text here"
                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
               <div class="row">

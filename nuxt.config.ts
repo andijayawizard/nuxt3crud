@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     }
   },
   colorMode: {
-    preference: 'dark'
+    // preference: 'dark'
   },
   // ui: {
   //   icons: ['mdi', 'simple-icons']

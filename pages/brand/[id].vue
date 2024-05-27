@@ -15,10 +15,29 @@ const data = await $fetch(`${params}`, {
 </script>
 
 <template>
-  <div>
-    Nama: {{ data.nama }}
-    Ringkasan: {{ data.rgks }}
-    <p v-html="data.ktrg"></p>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- /.card -->
+        <div class="card">
+          <div class="card-header">
+            <h4 class="card-title" v-text="data.nama">
+            </h4>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div>
+              <p>Published: {{ data.pub == 1 ? "yes" : "no" }}</p>
+              <p>Ringkasan: {{ data.rgks }}</p>
+              <p v-html="data.ktrg"></p>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
   </div>
 </template>
 

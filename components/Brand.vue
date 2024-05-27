@@ -18,6 +18,30 @@ const deleteRow = async (id: number) => {
   })
   refreshNuxtData('listBrand')
 }
+const currentPage = ref(1)
+const itemsPerPage = 3
+const onClickHandler = (page: any) => {
+  currentPage.value = page
+  scrollToTop()
+}
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+}
+onMounted(() => {
+  scrollToTop()
+})
+const total = computed(() => {
+  if (Array.isArray(listBrand.value)) {
+    return listBrand.value.length
+  } else {
+    return 0
+  }
+})
+const displayed = computed(() => {
+  const startIndex = (currentPage.value - 1) * itemsPerPage
+  const endIndex = startIndex + itemsPerPage
+  return Array.isArray(listBrand.value) ? listBrand.value.slice(startIndex, endIndex) : []
+})
 </script>
 
 <template>
@@ -41,6 +65,10 @@ const deleteRow = async (id: number) => {
       </tr>
     </tbody>
   </table>
+  <div class="pagination">
+    <vue-awesome-paginate :total-items="total" :items-per-page="itemsPerPage" v-model="currentPage" :max-pages-shown="3"
+      :on-click="onClickHandler" active-page-class="active" next-button-class="next" />
+  </div>
 </template>
 
 <style scoped></style>

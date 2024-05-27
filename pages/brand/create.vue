@@ -4,6 +4,7 @@ const router = useRouter();
 const title: string = 'Brand'
 useHead({ title: `Add New ${title}` })
 const nama = ref('')
+const pub = ref('')
 const rgks = ref('')
 const ktrg = ref('')
 const file = ref('')
@@ -14,6 +15,7 @@ const handleFileChange = (e: any) => {
 const store = async () => {
   let formData = new FormData()
   formData.append('nama', nama.value)
+  // formData.append('pub', pub.value)
   formData.append('rgks', rgks.value)
   formData.append('ktrg', ktrg.value)
   formData.append('file', file.value)
@@ -53,18 +55,18 @@ const store = async () => {
                   <input type="text" class="form-control" v-model="nama" placeholder="nama" required />
                 </div>
                 <div class="form-group col-lg-2 custom-control custom-checkbox">
-                  <input class="custom-control-input" type="checkbox" name="pub" id="pub" value="1" />
+                  <input class="custom-control-input" type="checkbox" v-model="pub" id="pub" value="1" />
                   <label for="pub" class="custom-control-label">Publish</label>
                 </div>
               </div>
               <div class="form-group">
                 <label>Summary</label>
-                <textarea name="rgks" class="" placeholder="Place some text here"
+                <textarea v-model="rgks" class="" placeholder="Place some text here"
                   style="width: 100%; height: 80px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
               <div class="form-group">
                 <label>Description</label>
-                <textarea name="ktrg" class="textarea" placeholder="Place some text here"
+                <textarea v-model="ktrg" class="textarea" placeholder="Place some text here"
                   style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </div>
               <div class="row">
