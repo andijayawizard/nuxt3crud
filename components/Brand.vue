@@ -42,6 +42,18 @@ const displayed = computed(() => {
   const endIndex = startIndex + itemsPerPage
   return Array.isArray(listBrand.value) ? listBrand.value.slice(startIndex, endIndex) : []
 })
+
+const page = ref(1)
+const previous = () => {
+  if (page.value != 1) {
+    page.value = page.value - 1
+  }
+}
+const next = () => {
+  if (page.value + 1 <= listBrand.value.last_page) {
+    page.value = page.value + 1
+  }
+}
 </script>
 
 <template>
@@ -69,6 +81,8 @@ const displayed = computed(() => {
     <vue-awesome-paginate :total-items="total" :items-per-page="itemsPerPage" v-model="currentPage" :max-pages-shown="3"
       :on-click="onClickHandler" active-page-class="active" next-button-class="next" />
   </div>
+  <button class="btn btn-xs btn-default" @click="previous()" v-if="page > 1">previous</button>
+  <button class="btn btn-xs btn-default" @click="next()" v-if="page < listBrand.last_page">next</button>
 </template>
 
 <style scoped></style>
