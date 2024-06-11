@@ -15,7 +15,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          logo <img src="" class="img-circle elevation-2" alt="<?= $sesi['username']; ?>">
+          logo <img src="" class="img-circle elevation-2" alt="username">
         </div>
         <div class="info">
           <a href="#" class="d-block">
@@ -64,10 +64,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a id="MainMenu" href="<?= $abs; ?>/backend/pages/index.php?page=main-menu" class="nav-link">
+                <NuxtLink id="MainMenu" to="/" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Main Menu</p>
-                </a>
+                </NuxtLink>
               </li>
               <li class="nav-item has-treeview">
                 <a href="#" class="nav-link">
@@ -111,11 +111,11 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=image-slide" class="nav-link">
+                <NuxtLink to="image-slide" class="nav-link">
                   <!-- <a id="ImageSlide" href="#image-slide" class="nav-link"> -->
                   <i class="far fa-circle nav-icon"></i>
                   <p>Image Slide</p>
-                </a>
+                </NuxtLink>
               </li>
               <li class="nav-item">
                 <NuxtLink to="/services" class="nav-link">
@@ -170,16 +170,16 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=cases-studies" class="nav-link">
+                <NuxtLink to="cases-studies" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cases Studies</p>
-                </a>
+                </NuxtLink>
               </li>
               <li class="nav-item">
-                <a href="<?= $abs; ?>/backend/pages/index.php?page=projects" class="nav-link">
+                <NuxtLink to="projects" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Projects</p>
-                </a>
+                </NuxtLink>
               </li>
               <li class="nav-item">
                 <NuxtLink to="/blog" class="nav-link">
@@ -223,10 +223,10 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=social-media" class="nav-link">
+                    <NuxtLink to="social-media" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Social Media</p>
-                    </a>
+                    </NuxtLink>
                   </li>
                   <li class="nav-item">
                     <a href="<?= $abs; ?>/backend/pages/index.php?page=misc&act=edit&id=1" class="nav-link">
