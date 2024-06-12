@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const id = getQuery(event)
+  const { id } = getQuery(event)
   const params = `/api/api.php/records/cases_studies/${id}`
   try {
     const data = await $fetch(`${params}`, {
