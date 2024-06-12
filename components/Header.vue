@@ -22,7 +22,9 @@ const links = [
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="<?=$abs;?>/backend/pages/index.php?page=main-menu">Home</a></li>
+            <li class="breadcrumb-item">
+              <NuxtLink to="/">Home</NuxtLink>
+            </li>
             <li class="breadcrumb-item active">
               {{ route.name }}
             </li>

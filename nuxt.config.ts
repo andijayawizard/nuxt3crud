@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         { src: "~/admin-lte/plugins/bootstrap/js/bootstrap.bundle.min.js", body: true },
         { src: "~/admin-lte/plugins/datatables/jquery.dataTables.min.js", body: true },
         { src: "~/admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js", body: true },
-        { src: "~/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js", body: true },
+        // { src: "~/admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js", body: true },
         { src: "~/admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js", body: true },
       ]
     }

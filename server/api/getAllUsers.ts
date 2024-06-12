@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const params = `/api/api.php/records/products?join=brand&include=products.id,products.nama,brand.nama&order=id,desc&page=1,10`
+  const params = `/api/api.php/records/user?join=user_level`
   try {
     const data = await $fetch(`${params}`, {
       baseURL: `${config.public.apiUrlLocal}`,
@@ -9,7 +9,8 @@ export default defineEventHandler(async (event) => {
       }
     })
     return data
-  } catch (error) {
+  }
+  catch (error) {
     console.log('error: ', error);
   }
 })

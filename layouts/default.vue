@@ -3,7 +3,7 @@
 <template>
 
   <body
-    class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed control-sidebar-slide-open text-sm">
+    class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm control-sidebar-slide-open">
     <div class="wrapper">
       <!-- <Breadcrumb /> -->
       <Navbar />

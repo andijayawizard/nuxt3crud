@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-const title: string = 'products'
+const title: string = 'users'
 useHead({ title: `List ${title}` })
-const listProducts: Product = await $fetch(`/api/getAllProducts`)
+const list: User = await $fetch(`/api/getAllUsers`)
 </script>
 
 <template>
@@ -24,20 +24,25 @@ const listProducts: Product = await $fetch(`/api/getAllProducts`)
               <thead class="border-b font-medium dark:border-white/10">
                 <tr>
                   <th scope="col" class="px-6 py-4">#</th>
+                  <th scope="col" class="px-6 py-4">Username</th>
+                  <th scope="col" class="px-6 py-4">Email</th>
                   <th scope="col" class="px-6 py-4">Nama</th>
+                  <th scope="col" class="px-6 py-4">Level</th>
                   <th scope="col" class="px-6 py-4">Action</th>
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="(item, index) in listProducts.records" :key="index"
+                <tr v-for="(item, index) in list.records" :key="index"
                   class="border-b border-neutral-200 dark:border-white/10">
-                  <td v-text="item.id" class="whitespace-nowrap px-4 py-4"></td>
-                  <td v-text="item.nama"></td>
-                  <!-- <td v-text="item.bid.nama"></td> -->
+                  <td v-text="item.id_login" class="whitespace-nowrap px-4 py-4"></td>
+                  <td v-text="item.username"></td>
+                  <td v-text="item.email"></td>
+                  <td v-text="item.nama_pengguna"></td>
+                  <td v-text="item.id_level.nama"></td>
                   <td>
-                    <NuxtLink :to="`/${title}/${item.id}`">Details</NuxtLink> |
-                    <NuxtLink :to="`/${title}/edit/${item.id}`">Edit</NuxtLink> |
-                    <NuxtLink :to="`/${title}/edit/${item.id}`">Delete</NuxtLink>
+                    <NuxtLink :to="`/${title}/${item.id_login}`">Details</NuxtLink> |
+                    <NuxtLink :to="`/${title}/edit/${item.id_login}`">Edit</NuxtLink> |
+                    <NuxtLink :to="`/${title}/edit/${item.id_login}`">Delete</NuxtLink>
                   </td>
                 </tr>
               </tbody>

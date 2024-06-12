@@ -1,4 +1,9 @@
 declare global {
+  interface User {
+    id: number,
+    name: string,
+    email: string
+  }
   interface Blog {
     id: number,
     nama: string,
