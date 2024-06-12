@@ -111,7 +111,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <NuxtLink to="image-slide" class="nav-link">
+                <NuxtLink to="/image-slide" class="nav-link">
                   <!-- <a id="ImageSlide" href="#image-slide" class="nav-link"> -->
                   <i class="far fa-circle nav-icon"></i>
                   <p>Image Slide</p>
@@ -170,7 +170,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <NuxtLink to="cases-studies" class="nav-link">
+                <NuxtLink to="/cases-studies" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Cases Studies</p>
                 </NuxtLink>
