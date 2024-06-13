@@ -22,6 +22,7 @@ declare global {
   }
   interface Product {
     id: number,
+    bid: number,
     nama: string,
     rgks: string,
     ktrg: string,
@@ -59,6 +60,31 @@ declare global {
     seo: string,
     acak: string,
     pub: boolean
+  }
+  interface Project {
+    id: number,
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean,
+  }
+  interface ReferenceCategory {
+    id: number,
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean,
+  }
+  interface Reference {
+    id: number,
+    refcat: number,
+    nama: string,
+    rgks: string,
+    ktrg: string,
+    acak: string,
+    pub: boolean,
   }
 }
 

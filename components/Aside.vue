@@ -4,9 +4,9 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link" target="_blank">
-      <img src="" alt="Morillo Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/logo-alt.png" alt="Morillo Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">
-        nama
+        Morillo
       </span>
     </a>
 
@@ -15,7 +15,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          logo <img src="" class="img-circle elevation-2" alt="username">
+          <img src="/logo-alt.png" class="img-circle elevation-2" alt="username">
         </div>
         <div class="info">
           <a href="#" class="d-block">
@@ -96,7 +96,7 @@
                   </ul>
                 </li> -->
                   <li class="nav-item">
-                    <NuxtLink id="MenuWeb" to="/menuweb" class="nav-link">
+                    <NuxtLink id="MenuWeb" to="/menu-website" class="nav-link">
                       <!-- <a id="MenuWeb" href="#menuweb" class="nav-link"> -->
                       <i class="far fa-circle nav-icon"></i>
                       <p>Menu Website</p>
