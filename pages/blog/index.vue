@@ -24,17 +24,42 @@ const filteredRows = computed(() => {
     })
   })
 })
+const module: string = 'blog'
+const title:string='Blog'
+useHead({ title: `List ${module}` })
 </script>
 
 <template>
-  <div class="flex px-3 py-3.5 border-b border-gray-200 dark:border-gray-700">
-    <UInput v-model="q" placeholder="filter data..." />
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <!-- /.card -->
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">
+              <NuxtLink :to="`/${module}/create`" class="btn btn-success btn-sm"><span class="fa fa-plus"></span>
+                {{ title }}
+              </NuxtLink>
+            </h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body">
+            <div class="flex px-3 py-3.5 border-b border-gray-200 dark:border-gray-700">
+              <UInput v-model="q" placeholder="filter data..." />
+            </div>
+            <div class="flex px-3 py-3.5 border-b border-gray-200 dark:border-gray-700">
+              <USelectMenu v-model="selectedColumns" :options="columns" multiple placeholder="Columns" />
+            </div>
+            <UTable :columns="columns" :rows="rows" />
+            <UPagination v-model="page" :page-count="pageCount" :total="listBlog.records.length" />
+          </div>
+          <!-- /.card-body -->
+        </div>
+        <!-- /.card -->
+      </div>
+      <!-- /.col -->
+    </div>
   </div>
-  <div class="flex px-3 py-3.5 border-b border-gray-200 dark:border-gray-700">
-    <USelectMenu v-model="selectedColumns" :options="columns" multiple placeholder="Columns" />
-  </div>
-  <UTable :columns="columns" :rows="rows" />
-  <UPagination v-model="page" :page-count="pageCount" :total="listBlog.records.length" />
 </template>
 
 <style scoped></style>
