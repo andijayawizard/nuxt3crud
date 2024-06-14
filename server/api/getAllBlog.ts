@@ -4,11 +4,11 @@ export default defineEventHandler(async (event) => {
   // const params = 'wp-json/wp/v2/posts?categories=754&_fields[]=id&_fields[]=title&per_page=10&page=1'
   try {
     const data = await $fetch(`${params}`, {
-      baseURL: `${config.public.apiUrlBitu}`,
+      baseURL: `${config.public.apiUrl}`,
       lazy: true,
       server: false,
       headers: {
-        'x-api-key': `${config.public.apiKeyBitu}`
+        'x-api-key': `${config.public.apiKey}`
       }
     })
     return data

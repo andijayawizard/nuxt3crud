@@ -5,10 +5,10 @@ export default defineEventHandler(async (event) => {
   const params = `/api/api.php/records/brand?include=id,nama&page=1,10`
   try {
     const data = await $fetch(`${params}`, {
-      baseURL: `${config.public.apiUrlLocal}`,
+      baseURL: `${config.public.apiUrl}`,
       // params: { page: page.value, search: search.value },
       headers: {
-        'x-api-key': `${config.public.apiKeyLocal}`
+        'x-api-key': `${config.public.apiKey}`
       }
     })
     // , { watch: [page, search] }

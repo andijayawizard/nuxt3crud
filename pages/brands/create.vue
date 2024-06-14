@@ -23,9 +23,9 @@ const store = async () => {
   await $fetch(`${params}`, {
     method: 'post',
     body: formData,
-    baseURL: `${config.public.apiUrlLocal}`,
+    baseURL: `${config.public.apiUrl}`,
     headers: {
-      'x-api-key': `${config.public.apiKeyLocal}`
+      'x-api-key': `${config.public.apiKey}`
     }
   }).then(() => {
     router.push({ path: '/brand' })

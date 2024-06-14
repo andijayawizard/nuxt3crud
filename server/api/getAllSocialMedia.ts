@@ -1,7 +1,6 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const id = getQuery(event)
-  const params = `/api/api.php/records/brand/${id}`
+  const params = `/api/api.php/records/socmed`
   try {
     const data = await $fetch(`${params}`, {
       baseURL: `${config.public.apiUrl}`,
@@ -10,6 +9,7 @@ export default defineEventHandler(async (event) => {
       }
     })
     return data
+
   } catch (error) {
     console.log('error: ', error);
   }

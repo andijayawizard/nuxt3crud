@@ -4,9 +4,9 @@ export default defineEventHandler(async (event) => {
   const params = `/api/api.php/records/menuweb/${id}?include=id,nama,caption,seo,title,keyword,description`
   try {
     const data = await $fetch(`${params}`, {
-      baseURL: `${config.public.apiUrlLocal}`,
+      baseURL: `${config.public.apiUrl}`,
       headers: {
-        'x-api-key': `${config.public.apiKeyLocal}`
+        'x-api-key': `${config.public.apiKey}`
       }
     })
     return data
