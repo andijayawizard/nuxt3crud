@@ -4,8 +4,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiUrlWP: process.env.apiUrlWP,
-      apiUrlLocal: process.env.apiUrlLocal,
-      apiKeyLocal: process.env.apiKeyLocal,
+      apiUrl: process.env.apiUrl,
+      apiKey: process.env.apiKey,
       apiUrlLara: process.env.apiUrlLara,
       apiUrlBitu: process.env.apiUrlBitu,
       apiKeyBitu: process.env.apiKeyBitu,

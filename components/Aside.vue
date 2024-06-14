@@ -223,13 +223,13 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <NuxtLink to="social-media" class="nav-link">
+                    <NuxtLink to="/social-media" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Social Media</p>
                     </NuxtLink>
                   </li>
                   <li class="nav-item">
-                    <a href="<?= $abs; ?>/backend/pages/index.php?page=misc&act=edit&id=1" class="nav-link">
+                    <a href="/miscellaneous" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Miscellaneous</p>
                     </a>
