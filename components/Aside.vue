@@ -133,7 +133,7 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <NuxtLink to="/brand" class="nav-link">
+                    <NuxtLink to="/brands" class="nav-link">
                       <i class="far fa-circle nav-icon"></i>
                       <p>Brand</p>
                     </NuxtLink>

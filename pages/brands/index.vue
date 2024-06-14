@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+const module: string = 'brand'
 const title: string = 'Brand'
 </script>
 
@@ -16,7 +17,7 @@ const title: string = 'Brand'
         <div class="card">
           <div class="card-header">
             <h3 class="card-title">
-              <NuxtLink to="/brand/create" class="btn btn-success btn-sm"><span class="fa fa-plus"></span>
+              <NuxtLink :to="`/${module}/create`" class="btn btn-success btn-sm"><span class="fa fa-plus"></span>
                 {{ title }}
               </NuxtLink>
             </h3>
