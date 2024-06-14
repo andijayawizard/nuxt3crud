@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Menuweb from '@/components/supabase/Menuweb.vue'
 const module: string = 'menu-website'
 const title: string = 'Menu Website'
 useHead({ title: `List ${title}` })
