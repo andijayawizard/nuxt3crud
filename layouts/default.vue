@@ -5,9 +5,9 @@
   <body
     class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed text-sm control-sidebar-slide-open">
     <div class="wrapper">
-      <!-- <Breadcrumb /> -->
       <Navbar />
-      <Aside />
+      <Breadcrumb />
+      <!-- <Aside /> -->
       <div class="content-wrapper">
         <Header />
         <section class="content">

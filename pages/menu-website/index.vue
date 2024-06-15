@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Menuweb from '@/components/supabase/Menuweb.vue'
 const module: string = 'menu-website'
 const title: string = 'Menu Website'
 useHead({ title: `List ${title}` })
@@ -20,7 +19,7 @@ useHead({ title: `List ${title}` })
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <Menuweb />
+            <NuxtuiMenuweb />
           </div>
           <!-- /.card-body -->
         </div>

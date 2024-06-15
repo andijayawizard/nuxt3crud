@@ -10,7 +10,7 @@ const columns = [
   { key: 'nama', label: 'Nama', sortable: true },
   { key: 'caption', label: 'Caption' },
   { key: 'seo', label: 'Slug' },
-  { key: 'action' }
+  { key: 'actions' }
 ]
 const items = (row: any) => [
   [{

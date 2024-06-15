@@ -1,6 +1,6 @@
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
-  const params = `/api/api.php/records/services?include=id,nama,acak`
+  const params = `/api/api.php/records/services?include=id,nama,seo,acak,pub`
   try {
     const data = await $fetch(`${params}`, {
       baseURL: `${config.public.apiUrl}`,

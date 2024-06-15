@@ -19,7 +19,8 @@ const list: User = await $fetch(`/api/getAllUsers`)
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <table id="brand" class="table- table-striped- table-bordered- min-w-full text-left text-sm font-light"
+            <LazyNuxtuiUsers />
+            <!-- <table id="brand" class="table- table-striped- table-bordered- min-w-full text-left text-sm font-light"
               cellspacing="0" width="100%">
               <thead class="border-b font-medium dark:border-white/10">
                 <tr>
@@ -46,7 +47,7 @@ const list: User = await $fetch(`/api/getAllUsers`)
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
           </div>
           <!-- /.card-body -->
         </div>
