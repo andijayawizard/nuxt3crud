@@ -2,7 +2,8 @@
 const title: string = 'Image Slide'
 const module: string = 'image-slide'
 useHead({ title: `List ${title}` })
-const list: ImageSlide = await $fetch(`/api/getAllImageSlide`)</script>
+const list: ImageSlide = await $fetch(`/api/getAllImageSlide`)
+</script>
 
 <template>
   <div class="container-fluid">

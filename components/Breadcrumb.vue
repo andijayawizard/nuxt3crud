@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+const route = useRoute();
+const module = route.name
 const links = [
   { label: 'Home', icon: 'i-heroicons-home', to: '/' },
-  { label: 'Products', to: '/products' },
-  { label: 'Add New', to: '/products/create' }
+  { label: `${module}`, to: `/${module}` },
+  { label: 'Add New', to: `/${module}/create` }
 ]
 </script>
 

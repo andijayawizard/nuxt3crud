@@ -21,9 +21,9 @@ export default defineNuxtConfig({
         { name: 'keywords', content: 'keywords' },
         { name: 'description', content: 'description' },
       ], link: [
-        { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css' },
-        { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" },
-        { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" },
+        // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/css/adminlte.min.css' },
+        // { rel: "stylesheet", href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" },
+        // { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" },
         // { rel: "stylesheet", href: "/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css" },
         // { rel: "stylesheet", href: "/plugins/datatables-responsive/css/responsive.bootstrap4.min.css" },
         // { rel: "stylesheet", href: "/plugins/fontawesome-free/css/all.min.css" },
@@ -38,9 +38,9 @@ export default defineNuxtConfig({
         // { rel: "stylesheet", href: "/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css" },
         // { rel: "stylesheet", href: "/plugins/toastr/toastr.min.css" },
       ], script: [
-        { src: "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js", body: true },
-        { src: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js', body: true },
-        { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", body: true },
+        // { src: "https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js", body: true },
+        // { src: 'https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js', body: true },
+        // { src: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js", body: true },
         // { src: "/plugins/jquery/jquery.min.js", body: true },
         // { src: "/plugins/bootstrap/js/bootstrap.bundle.min.js", body: true },
         // { src: "/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js", body: true },
@@ -63,12 +63,13 @@ export default defineNuxtConfig({
     }
   },
   colorMode: {
-    // preference: 'dark'
+    preference: 'dark'
   },
   // ui: {
   //   icons: ['mdi', 'simple-icons']
   // },
-  modules: ["@nuxt/ui",
+  modules: [
+    "@nuxt/ui",
     "@nuxtjs/supabase",
     '@nuxt/image'
   ],

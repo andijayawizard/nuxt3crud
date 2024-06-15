@@ -30,7 +30,8 @@ const deleteRow = async (id: number) => {
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <table id="brand" class="table- table-striped- table-bordered- min-w-full text-left text-sm font-light"
+            <LazyNuxtuiSocialMedia />
+            <!-- <table id="brand" class="table- table-striped- table-bordered- min-w-full text-left text-sm font-light"
               cellspacing="0" width="100%">
               <thead class="border-b font-medium dark:border-white/10">
                 <tr>
@@ -53,7 +54,7 @@ const deleteRow = async (id: number) => {
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> -->
           </div>
           <!-- /.card-body -->
         </div>

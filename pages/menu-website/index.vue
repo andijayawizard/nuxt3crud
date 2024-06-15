@@ -19,7 +19,7 @@ useHead({ title: `List ${title}` })
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <Menuweb />
+            <NuxtuiMenuweb />
           </div>
           <!-- /.card-body -->
         </div>
