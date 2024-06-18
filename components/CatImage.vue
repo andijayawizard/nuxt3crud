@@ -16,10 +16,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="flex flex-wrap w-1/3">
+  <div class="flex flex-wrap w-1/4">
     <div class="w-full p-1 md:p-2">
       <NuxtImg class="block object-cover object-center w-full h-full rounded-lg" :alt="alt" format="webp" :src="src" />
-      <div v-text="title"></div>
+      <div>title: {{ title }}</div>
     </div>
   </div>
 </template>
