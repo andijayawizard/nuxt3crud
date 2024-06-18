@@ -46,6 +46,7 @@ const items = (row: any) => [
       </UDropdown>
     </template>
   </UTable>
+  <UPagination v-model="page" :page-count="pageCount" :total="list.records.length" show-last show-first />
 </template>
 
 <style scoped></style>

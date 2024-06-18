@@ -29,8 +29,8 @@ export default defineNuxtConfig({
         // { rel: "stylesheet", href: "/plugins/fontawesome-free/css/all.min.css" },
         // { rel: "stylesheet", href: "/plugins/overlayScrollbars/css/OverlayScrollbars.min.css" },
         // { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.2.0/css/adminlte.min.css" },
-        { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" },
-        { rel: "stylesheet", href: "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" },
+        // { rel: "stylesheet", href: "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" },
+        // { rel: "stylesheet", href: "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" },
         // { rel: "stylesheet", href: "/plugins/icheck-bootstrap/icheck-bootstrap.min.css" },
         // { rel: "stylesheet", href: "/plugins/select2/css/select2.min.css" },
         // { rel: "stylesheet", href: "/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css" },
@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     }
   },
   colorMode: {
-    preference: 'dark'
+    preference: 'system'
   },
   // ui: {
   //   icons: ['mdi', 'simple-icons']
@@ -71,7 +71,8 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxtjs/supabase",
-    '@nuxt/image'
+    '@nuxt/image',
+    '@pinia/nuxt'
   ],
   supabase: {
     redirect: false

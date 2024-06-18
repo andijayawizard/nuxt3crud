@@ -47,6 +47,10 @@ const links = [{
   label: 'Products',
   icon: 'i-heroicons-question-mark-circle',
   to: '/products'
+}, {
+  label: 'Contact',
+  icon: 'i-heroicons-envelope',
+  to: '/contact'
 }]
 
 const pageLinks = [{
